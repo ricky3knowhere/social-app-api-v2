@@ -4,6 +4,8 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 
 import AuthRoute from "./routes/AuthRoute.js";
+import UserRoute from "./routes/UserRoute.js";
+import PostRoute from "./routes/PostRoute.js";
 
 // Middlewarare
 const app = express();
@@ -26,3 +28,5 @@ mongoose
 
 // Routes
 app.use("/auth", AuthRoute);
+app.use("/user", UserRoute);
+app.use("/post", PostRoute);
